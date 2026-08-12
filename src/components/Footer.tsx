@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
       <div className="container footer-container">
         <div className="footer-left">
           <Link to="/" className="footer-logo">
-            PHENY
+            <img src="/images/Logo.png" alt="PHENY Logo" className="footer-logo-img" />
           </Link>
           <p className="footer-copyright">
             © {currentYear} PHENY LTD. All rights reserved. Building technology with purpose. Leading with excellence. Creating impact through innovation.
@@ -58,12 +58,14 @@ export const Footer: React.FC = () => {
         }
 
         .footer-logo {
-          font-size: 1.625rem;
-          font-weight: 800;
-          letter-spacing: -0.03em;
-          color: #B53F00;
           display: inline-block;
           margin-bottom: 12px;
+        }
+
+        .footer-logo-img {
+          height: 40px;
+          width: auto;
+          object-fit: contain;
         }
 
         .footer-copyright {

@@ -17,7 +17,7 @@ export const Navbar: React.FC = () => {
     <header className="navbar-header">
       <div className="container navbar-container">
         <NavLink to="/" className="navbar-logo" onClick={() => setMobileMenuOpen(false)}>
-          PHENY
+          <img src="/images/Logo.png" alt="PHENY Logo" className="navbar-logo-img" />
         </NavLink>
 
         <nav className="navbar-desktop-nav">
@@ -104,6 +104,14 @@ export const Navbar: React.FC = () => {
           font-weight: 800;
           letter-spacing: -0.03em;
           color: var(--text-primary);
+          display: flex;
+          align-items: center;
+        }
+
+        .navbar-logo-img {
+          height: 44px;
+          width: auto;
+          object-fit: contain;
         }
 
         .navbar-desktop-nav {
