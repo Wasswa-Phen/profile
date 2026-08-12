@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { MessageSquare } from 'lucide-react';
 
 export const WhatsAppButton: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);

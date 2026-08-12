@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
@@ -40,7 +40,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <div className="app-shell">
         <Navbar theme={theme} onToggleTheme={toggleTheme} />
@@ -67,7 +67,7 @@ export const App: React.FC = () => {
           flex: 1;
         }
       `}</style>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

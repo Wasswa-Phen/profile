@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 
@@ -17,6 +17,17 @@ export const Navbar: React.FC<NavbarProps> = ({ theme = 'light', onToggleTheme }
     { label: 'Projects', path: '/projects' },
     { label: 'Articles', path: '/articles' },
   ];
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header className="navbar-header">
@@ -62,36 +73,41 @@ export const Navbar: React.FC<NavbarProps> = ({ theme = 'light', onToggleTheme }
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Full Screen Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="mobile-drawer animate-fade-in">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={({ isActive }) =>
-                `mobile-nav-link ${isActive ? 'active' : ''}`
-              }
-              onClick={() => setMobileMenuOpen(false)}
-              end={item.path === '/'}
+          <div className="mobile-nav-links">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  `mobile-nav-link ${isActive ? 'active' : ''}`
+                }
+                onClick={() => setMobileMenuOpen(false)}
+                end={item.path === '/'}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="mobile-drawer-footer">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                navigate('/contact');
+              }}
+              className="btn btn-primary-orange mobile-cta"
             >
-              {item.label}
-            </NavLink>
-          ))}
-          <button
-            onClick={() => {
-              setMobileMenuOpen(false);
-              navigate('/contact');
-            }}
-            className="btn btn-primary-orange mobile-cta"
-          >
-            Get in Touch
-          </button>
+              Get in Touch
+            </button>
+          </div>
         </div>
       )}
 
@@ -171,33 +187,48 @@ export const Navbar: React.FC<NavbarProps> = ({ theme = 'light', onToggleTheme }
 
         .mobile-drawer {
           display: none;
-          position: absolute;
+          position: fixed;
           top: 80px;
           left: 0;
           right: 0;
+          bottom: 0;
+          height: calc(100vh - 80px);
           background-color: var(--bg-card);
-          border-bottom: 1px solid var(--border-light);
-          padding: 24px;
+          padding: 40px 24px 48px 24px;
           flex-direction: column;
-          gap: 16px;
-          box-shadow: var(--shadow-lg);
+          justify-content: space-between;
+          z-index: 999;
+          overflow-y: auto;
+        }
+
+        .mobile-nav-links {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
         }
 
         .mobile-nav-link {
-          font-size: 1.125rem;
-          font-weight: 600;
-          color: var(--text-secondary);
-          padding: 8px 0;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-primary);
+          padding: 12px 0;
+          border-bottom: 1px solid var(--border-subtle);
+          display: block;
+          transition: color var(--transition-fast);
         }
 
         .mobile-nav-link.active {
           color: var(--primary-orange);
-          font-weight: 700;
+        }
+
+        .mobile-drawer-footer {
+          margin-top: 32px;
         }
 
         .mobile-cta {
-          margin-top: 12px;
           width: 100%;
+          padding: 16px;
+          font-size: 1.0625rem;
         }
 
         @media (max-width: 768px) {
