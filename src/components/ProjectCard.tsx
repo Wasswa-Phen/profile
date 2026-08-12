@@ -55,7 +55,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenCaseStu
 
       <style>{`
         .project-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           overflow: hidden;
@@ -74,7 +74,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenCaseStu
           width: 100%;
           height: 220px;
           overflow: hidden;
-          background-color: #F8F4F0;
+          background-color: var(--bg-hero);
         }
 
         .card-image-wrapper img {

@@ -41,9 +41,10 @@ export const Footer: React.FC = () => {
       <style>{`
         .site-footer {
           margin-top: auto;
-          background-color: #FFF0E8;
-          border-top: 1px solid #F7E2D5;
+          background-color: var(--bg-tag-orange);
+          border-top: 1px solid var(--border-light);
           padding: 48px 0;
+          transition: background-color var(--transition-normal);
         }
 
         .footer-container {

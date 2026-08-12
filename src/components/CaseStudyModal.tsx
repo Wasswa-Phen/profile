@@ -109,7 +109,8 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
         }
 
         .modal-container {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
+          border: 1px solid var(--border-light);
           border-radius: var(--radius-hero);
           max-width: 760px;
           width: 100%;
@@ -124,7 +125,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
           position: absolute;
           top: 24px;
           right: 24px;
-          background: #F4EBE4;
+          background: var(--bg-hero);
           border: none;
           border-radius: 50%;
           width: 40px;
@@ -138,7 +139,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
         }
 
         .modal-close:hover {
-          background-color: #E8DCD4;
+          background-color: var(--border-light);
         }
 
         .modal-header {
@@ -157,7 +158,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
           border-radius: var(--radius-card);
           overflow: hidden;
           margin-bottom: 28px;
-          background-color: #F8F4F0;
+          background-color: var(--bg-hero);
         }
 
         .modal-image img {

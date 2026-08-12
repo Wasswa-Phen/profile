@@ -30,7 +30,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) =
 
         <style>{`
           .featured-article-card {
-            background: #FFFFFF;
+            background-color: var(--bg-card);
             border: 1px solid var(--border-light);
             border-radius: var(--radius-hero);
             overflow: hidden;
@@ -137,7 +137,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) =
 
       <style>{`
         .standard-article-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           overflow: hidden;
@@ -156,7 +156,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) =
           width: 100%;
           height: 200px;
           overflow: hidden;
-          background-color: #F8F4F0;
+          background-color: var(--bg-hero);
         }
 
         .standard-image img {

@@ -35,6 +35,33 @@
   --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+[data-theme="dark"] {
+  --bg-main: #0F1219;
+  --bg-card: #181E2B;
+  --bg-hero: #141A28;
+  --bg-tag-orange: #2C1F15;
+  --bg-tag-blue: #16243D;
+  --bg-dark-banner: #1B2B4C;
+  
+  --primary-orange: #F58D1E;
+  --primary-orange-hover: #FFA238;
+  --primary-orange-light: #2A1D12;
+  
+  --secondary-blue: #4B7BEC;
+  --secondary-blue-hover: #3D6BDC;
+  
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  
+  --border-light: #242D40;
+  --border-subtle: #1C2333;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.50);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -293,3 +320,55 @@ button, input, textarea {
 .animate-fade-in {
   animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Dark Theme Component Overrides */
+[data-theme="dark"] .filter-pill {
+  background-color: var(--bg-tag-blue);
+  color: var(--secondary-blue);
+}
+
+[data-theme="dark"] .filter-pill:hover {
+  background-color: #1E3154;
+}
+
+[data-theme="dark"] .filter-pill.active {
+  background-color: var(--primary-orange);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .badge-blue {
+  background-color: var(--bg-tag-blue);
+  color: var(--secondary-blue);
+}
+
+[data-theme="dark"] .badge-orange-subtle {
+  background-color: var(--bg-tag-orange);
+  color: var(--primary-orange);
+}
+
+[data-theme="dark"] .badge-grey {
+  background-color: var(--border-light);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .btn-circle {
+  border-color: var(--secondary-blue);
+  color: var(--secondary-blue);
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .btn-circle:hover {
+  background-color: var(--secondary-blue);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .btn-outline {
+  border-color: var(--border-light);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  border-color: var(--primary-orange);
+  background-color: rgba(245, 141, 30, 0.1);
+}
+

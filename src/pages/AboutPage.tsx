@@ -301,7 +301,7 @@ export const AboutPage: React.FC = () => {
         }
 
         .value-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           padding: 28px;
@@ -312,7 +312,7 @@ export const AboutPage: React.FC = () => {
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          background-color: #FFF0EA;
+          background-color: var(--bg-tag-orange);
           color: var(--primary-orange);
           display: flex;
           align-items: center;
@@ -328,7 +328,7 @@ export const AboutPage: React.FC = () => {
         }
 
         .edu-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           padding: 28px;
@@ -342,8 +342,8 @@ export const AboutPage: React.FC = () => {
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          background-color: #EDF2FC;
-          color: #3B6EDC;
+          background-color: var(--bg-tag-blue);
+          color: var(--secondary-blue);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -379,7 +379,7 @@ export const AboutPage: React.FC = () => {
         }
 
         .journey-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           padding: 32px;
@@ -387,8 +387,8 @@ export const AboutPage: React.FC = () => {
         }
 
         .toolbox-card {
-          background-color: #FFF0EA;
-          border: 1px solid #F8E2D6;
+          background-color: var(--bg-tag-orange);
+          border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           padding: 32px;
         }

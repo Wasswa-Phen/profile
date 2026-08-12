@@ -271,7 +271,7 @@ export const HomePage: React.FC = () => {
         }
 
         .expertise-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           padding: 32px 24px;
@@ -297,17 +297,17 @@ export const HomePage: React.FC = () => {
         }
 
         .icon-orange {
-          background-color: #FFF0EA;
+          background-color: var(--bg-tag-orange);
           color: var(--primary-orange);
         }
 
         .icon-blue {
-          background-color: #EDF2FC;
-          color: #3B6EDC;
+          background-color: var(--bg-tag-blue);
+          color: var(--secondary-blue);
         }
 
         .icon-cyan {
-          background-color: #E6F7F8;
+          background-color: var(--bg-tag-blue);
           color: #0F766E;
         }
 
@@ -321,7 +321,7 @@ export const HomePage: React.FC = () => {
         .link-arrow {
           background: none;
           border: none;
-          color: #3B6EDC;
+          color: var(--secondary-blue);
           font-size: 0.875rem;
           font-weight: 700;
           display: inline-flex;
@@ -333,7 +333,8 @@ export const HomePage: React.FC = () => {
         }
 
         .about-summary-box {
-          background-color: #FFF0EA;
+          background-color: var(--bg-tag-orange);
+          border: 1px solid var(--border-light);
           border-radius: var(--radius-hero);
           padding: 48px;
           display: grid;
@@ -347,7 +348,7 @@ export const HomePage: React.FC = () => {
           height: 320px;
           border-radius: var(--radius-card);
           overflow: hidden;
-          background-color: #FDDCB4;
+          background-color: var(--bg-hero);
         }
 
         .about-summary-image img {
@@ -363,7 +364,7 @@ export const HomePage: React.FC = () => {
         }
 
         .featured-insight-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           overflow: hidden;

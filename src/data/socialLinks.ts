@@ -1,11 +1,17 @@
 export interface SocialLink {
   name: string;
   url: string;
-  iconName: 'linkedin' | 'github' | 'twitter' | 'youtube' | 'instagram' | 'facebook' | 'code';
+  iconName: 'linkedin' | 'github' | 'twitter' | 'youtube' | 'instagram' | 'facebook' | 'whatsapp' | 'code';
   status?: 'active' | 'coming-soon';
 }
 
 export const socialLinksData: SocialLink[] = [
+  {
+    name: 'WhatsApp',
+    url: 'https://wa.me/256701951404?text=Hello%20Stephen%2C%20I%20reached%20out%20from%20your%20portfolio!',
+    iconName: 'whatsapp',
+    status: 'active'
+  },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/stephen-wasswa',

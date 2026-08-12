@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  theme?: 'light' | 'dark';
+  onToggleTheme?: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ theme = 'light', onToggleTheme }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -36,6 +41,15 @@ export const Navbar: React.FC = () => {
         </nav>
 
         <div className="navbar-actions">
+          <button
+            onClick={onToggleTheme}
+            className="theme-toggle-btn"
+            aria-label="Toggle dark mode"
+            title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
           <button
             onClick={() => navigate('/contact')}
             className="btn btn-primary-orange desktop-cta"
@@ -86,11 +100,12 @@ export const Navbar: React.FC = () => {
           position: sticky;
           top: 0;
           z-index: 100;
-          background-color: #FFFFFF;
+          background-color: var(--bg-card);
           border-bottom: 1px solid var(--border-light);
           height: 80px;
           display: flex;
           align-items: center;
+          transition: background-color var(--transition-normal);
         }
 
         .navbar-container {
@@ -126,6 +141,25 @@ export const Navbar: React.FC = () => {
           gap: 16px;
         }
 
+        .theme-toggle-btn {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          border: 1px solid var(--border-light);
+          background-color: var(--bg-hero);
+          color: var(--primary-orange);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all var(--transition-fast);
+        }
+
+        .theme-toggle-btn:hover {
+          transform: rotate(15deg) scale(1.05);
+          border-color: var(--primary-orange);
+        }
+
         .mobile-toggle {
           display: none;
           background: none;
@@ -141,7 +175,7 @@ export const Navbar: React.FC = () => {
           top: 80px;
           left: 0;
           right: 0;
-          background-color: #FFFFFF;
+          background-color: var(--bg-card);
           border-bottom: 1px solid var(--border-light);
           padding: 24px;
           flex-direction: column;

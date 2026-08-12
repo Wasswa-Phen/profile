@@ -67,6 +67,26 @@ export const ContactPage: React.FC = () => {
                   +256 701 951 404
                 </a>
                 <span className="phone-badge">Airtel · WhatsApp</span>
+                <div style={{ marginTop: '8px' }}>
+                  <a
+                    href="https://wa.me/256701951404?text=Hello%20Stephen%2C%20I%20reached%20out%20from%20your%20portfolio!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline"
+                    style={{
+                      padding: '6px 14px',
+                      fontSize: '0.8125rem',
+                      borderColor: '#25D366',
+                      color: '#25D366',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                    }}
+                  >
+                    <MessageCircle size={14} />
+                    Chat on WhatsApp
+                  </a>
+                </div>
                 <br />
                 <a href="tel:+256763260974" className="info-link">
                   +256 763 260 974
@@ -230,7 +250,7 @@ export const ContactPage: React.FC = () => {
         }
 
         .info-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-card);
           padding: 24px;
@@ -240,17 +260,21 @@ export const ContactPage: React.FC = () => {
           box-shadow: var(--shadow-sm);
         }
 
+        .info-card:hover {
+          box-shadow: var(--shadow-md);
+        }
+
         .brand-card {
-          background-color: #FFF9F6;
-          border-color: #F7E2D5;
+          background-color: var(--bg-tag-orange);
+          border-color: var(--border-light);
         }
 
         .info-icon-circle {
           width: 44px;
           height: 44px;
           border-radius: 50%;
-          background-color: #EDF2FC;
-          color: #3B6EDC;
+          background-color: var(--bg-tag-blue);
+          color: var(--secondary-blue);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -258,7 +282,7 @@ export const ContactPage: React.FC = () => {
         }
 
         .brand-icon {
-          background-color: #FFF0EA;
+          background-color: var(--bg-tag-orange);
           color: var(--primary-orange);
         }
 
@@ -271,7 +295,7 @@ export const ContactPage: React.FC = () => {
         .info-link {
           font-size: 0.9375rem;
           font-weight: 700;
-          color: #DA7A10;
+          color: var(--primary-orange);
           display: inline-block;
         }
 
@@ -285,8 +309,8 @@ export const ContactPage: React.FC = () => {
         .phone-badge {
           font-size: 0.6875rem;
           font-weight: 700;
-          background-color: #EDF2FC;
-          color: #3B6EDC;
+          background-color: var(--bg-tag-blue);
+          color: var(--secondary-blue);
           padding: 2px 8px;
           border-radius: 6px;
           margin-left: 8px;
@@ -307,7 +331,7 @@ export const ContactPage: React.FC = () => {
         }
 
         .form-card {
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-hero);
           padding: 40px;
@@ -343,8 +367,8 @@ export const ContactPage: React.FC = () => {
           width: 100%;
           padding: 12px 16px;
           border-radius: var(--radius-input);
-          border: 1px solid #E4D8D0;
-          background-color: #FAF6F3;
+          border: 1px solid var(--border-light);
+          background-color: var(--bg-main);
           font-size: 0.9375rem;
           color: var(--text-primary);
           transition: border-color var(--transition-fast), background-color var(--transition-fast);
@@ -354,7 +378,7 @@ export const ContactPage: React.FC = () => {
         .form-group input:focus,
         .form-group textarea:focus {
           border-color: var(--primary-orange);
-          background-color: #FFFFFF;
+          background-color: var(--bg-card);
         }
 
         .full-width-btn {
