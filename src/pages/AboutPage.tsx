@@ -202,7 +202,7 @@ export const AboutPage: React.FC = () => {
           border-radius: var(--radius-card);
           overflow: hidden;
           position: relative;
-          background-color: #F8F4F0;
+          background-color: var(--bg-hero);
           box-shadow: var(--shadow-md);
         }
 
@@ -216,7 +216,7 @@ export const AboutPage: React.FC = () => {
           position: absolute;
           bottom: -16px;
           left: -16px;
-          background: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           padding: 12px 20px;
           border-radius: 16px;
@@ -253,7 +253,7 @@ export const AboutPage: React.FC = () => {
 
         /* PROFESSIONAL STATEMENT */
         .statement-box {
-          background-color: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           border-left: 4px solid var(--primary-orange);
           border-radius: var(--radius-card);
@@ -478,7 +478,7 @@ export const AboutPage: React.FC = () => {
         .toolbox-pill {
           padding: 5px 14px;
           border-radius: var(--radius-pill);
-          background-color: #FFFFFF;
+          background-color: var(--bg-card);
           border: 1px solid var(--border-light);
           font-size: 0.8125rem;
           font-weight: 600;
@@ -487,9 +487,9 @@ export const AboutPage: React.FC = () => {
         }
 
         .toolbox-pill.highlight {
-          background-color: #FFF0EA;
-          border-color: #FFC4A8;
-          color: #D94800;
+          background-color: var(--bg-tag-orange);
+          border-color: var(--border-light);
+          color: var(--primary-orange);
         }
 
         .mb-1 { margin-bottom: 4px; }

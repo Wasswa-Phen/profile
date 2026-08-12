@@ -435,11 +435,13 @@ export const HomePage: React.FC = () => {
 
         .banner-white-btn {
           background-color: #FFFFFF;
-          color: var(--text-primary);
+          color: #1E1B18 !important;
+          font-weight: 700;
         }
 
         .banner-white-btn:hover {
           background-color: #F8F4F0;
+          color: #1E1B18 !important;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 

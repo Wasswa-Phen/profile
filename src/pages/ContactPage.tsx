@@ -416,21 +416,21 @@ export const ContactPage: React.FC = () => {
           gap: 8px;
           padding: 10px 20px;
           border-radius: var(--radius-pill);
-          background-color: #EDF2FC;
-          color: #3B6EDC;
+          background-color: var(--bg-tag-blue);
+          color: var(--secondary-blue);
           font-size: 0.875rem;
           font-weight: 700;
           transition: all var(--transition-fast);
         }
 
         .social-pill:hover:not(.disabled) {
-          background-color: #DBE5FA;
+          background-color: var(--border-light);
           transform: translateY(-1px);
           color: var(--primary-orange);
         }
 
         .social-pill.disabled {
-          background-color: #F1ECE8;
+          background-color: var(--bg-main);
           color: var(--text-muted);
           opacity: 0.8;
           cursor: default;
@@ -438,7 +438,7 @@ export const ContactPage: React.FC = () => {
 
         .pill-badge {
           font-size: 0.6875rem;
-          background-color: #E2D7CF;
+          background-color: var(--border-light);
           padding: 2px 6px;
           border-radius: 6px;
           color: var(--text-secondary);
