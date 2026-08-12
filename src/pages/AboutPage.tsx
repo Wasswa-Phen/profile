@@ -189,7 +189,7 @@ export const AboutPage: React.FC = () => {
         .about-subtitle {
           font-size: 1.125rem;
           font-weight: 700;
-          color: #B53F00;
+          color: #DA7A10;
         }
 
         .about-hero-photo-container {
@@ -289,7 +289,7 @@ export const AboutPage: React.FC = () => {
           left: 0;
           width: 48px;
           height: 3px;
-          background-color: #B53F00;
+          background-color: #DA7A10;
           border-radius: 2px;
         }
 
@@ -342,8 +342,8 @@ export const AboutPage: React.FC = () => {
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          background-color: #EBF3FA;
-          color: #1A568C;
+          background-color: #EDF2FC;
+          color: #3B6EDC;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -424,13 +424,13 @@ export const AboutPage: React.FC = () => {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background-color: #B53F00;
+          background-color: #DA7A10;
         }
 
         .timeline-period {
           font-size: 0.75rem;
           font-weight: 800;
-          color: #B53F00;
+          color: #DA7A10;
           letter-spacing: 0.05em;
         }
 

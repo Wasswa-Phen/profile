@@ -1,17 +1,17 @@
 :root {
   --bg-main: #FFF9F6;
   --bg-card: #FFFFFF;
-  --bg-hero: #EBF0F5;
+  --bg-hero: #EEF2FB;
   --bg-tag-orange: #FFF0E6;
-  --bg-tag-blue: #EBF3FA;
-  --bg-dark-banner: #245B8B;
+  --bg-tag-blue: #EDF2FC;
+  --bg-dark-banner: #3B6EDC;
   
-  --primary-orange: #FF5500;
-  --primary-orange-hover: #E04B00;
-  --primary-orange-light: #FFEDE0;
+  --primary-orange: #F58D1E;
+  --primary-orange-hover: #DA7A10;
+  --primary-orange-light: #FFF0E0;
   
-  --secondary-blue: #1D4E7D;
-  --secondary-blue-hover: #163E64;
+  --secondary-blue: #3B6EDC;
+  --secondary-blue-hover: #2F5ABB;
   
   --text-primary: #1E1B18;
   --text-secondary: #635C56;
@@ -159,7 +159,7 @@ button, input, textarea {
 .btn-primary-orange:hover {
   background-color: var(--primary-orange-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 85, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(245, 141, 30, 0.30);
 }
 
 .btn-secondary-blue {
@@ -187,8 +187,8 @@ button, input, textarea {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1.5px solid #0056B3;
-  color: #0056B3;
+  border: 1.5px solid #3B6EDC;
+  color: #3B6EDC;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -198,7 +198,7 @@ button, input, textarea {
 }
 
 .btn-circle:hover {
-  background-color: #0056B3;
+  background-color: #3B6EDC;
   color: white;
 }
 
@@ -208,15 +208,15 @@ button, input, textarea {
   border-radius: var(--radius-pill);
   font-size: 0.875rem;
   font-weight: 600;
-  background-color: #EBF1F6;
-  color: #2D5B88;
+  background-color: #EDF2FC;
+  color: #3B6EDC;
   border: none;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .filter-pill:hover {
-  background-color: #DDE7F0;
+  background-color: #DBE5FA;
 }
 
 .filter-pill.active {
@@ -235,13 +235,13 @@ button, input, textarea {
 }
 
 .badge-blue {
-  background-color: #E6F0FA;
-  color: #1A568C;
+  background-color: #EDF2FC;
+  color: #3B6EDC;
 }
 
 .badge-orange-subtle {
   background-color: #FFF0EA;
-  color: #D94800;
+  color: #DA7A10;
 }
 
 .badge-grey {

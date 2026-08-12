@@ -249,8 +249,8 @@ export const ContactPage: React.FC = () => {
           width: 44px;
           height: 44px;
           border-radius: 50%;
-          background-color: #EBF3FA;
-          color: #1A568C;
+          background-color: #EDF2FC;
+          color: #3B6EDC;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -271,7 +271,7 @@ export const ContactPage: React.FC = () => {
         .info-link {
           font-size: 0.9375rem;
           font-weight: 700;
-          color: #B53F00;
+          color: #DA7A10;
           display: inline-block;
         }
 
@@ -285,8 +285,8 @@ export const ContactPage: React.FC = () => {
         .phone-badge {
           font-size: 0.6875rem;
           font-weight: 700;
-          background-color: #EBF3FA;
-          color: #1A568C;
+          background-color: #EDF2FC;
+          color: #3B6EDC;
           padding: 2px 8px;
           border-radius: 6px;
           margin-left: 8px;
@@ -392,15 +392,15 @@ export const ContactPage: React.FC = () => {
           gap: 8px;
           padding: 10px 20px;
           border-radius: var(--radius-pill);
-          background-color: #EBF3FA;
-          color: #1A568C;
+          background-color: #EDF2FC;
+          color: #3B6EDC;
           font-size: 0.875rem;
           font-weight: 700;
           transition: all var(--transition-fast);
         }
 
         .social-pill:hover:not(.disabled) {
-          background-color: #DDEBF7;
+          background-color: #DBE5FA;
           transform: translateY(-1px);
           color: var(--primary-orange);
         }

@@ -216,7 +216,7 @@ export const HomePage: React.FC = () => {
         }
 
         .text-orange-accent {
-          color: #B53F00;
+          color: #DA7A10;
         }
 
         .hero-subtitle {
@@ -302,8 +302,8 @@ export const HomePage: React.FC = () => {
         }
 
         .icon-blue {
-          background-color: #EBF3FA;
-          color: #1A568C;
+          background-color: #EDF2FC;
+          color: #3B6EDC;
         }
 
         .icon-cyan {
@@ -321,7 +321,7 @@ export const HomePage: React.FC = () => {
         .link-arrow {
           background: none;
           border: none;
-          color: #1A568C;
+          color: #3B6EDC;
           font-size: 0.875rem;
           font-weight: 700;
           display: inline-flex;
@@ -347,7 +347,7 @@ export const HomePage: React.FC = () => {
           height: 320px;
           border-radius: var(--radius-card);
           overflow: hidden;
-          background-color: #F7E5DB;
+          background-color: #FDDCB4;
         }
 
         .about-summary-image img {

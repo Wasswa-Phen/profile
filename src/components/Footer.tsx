@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
         .footer-copyright {
           font-size: 0.8125rem;
           line-height: 1.5;
-          color: #1A4975;
+          color: #3B6EDC;
           font-weight: 500;
         }
 
