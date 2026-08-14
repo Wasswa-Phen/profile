@@ -5,9 +5,10 @@ import type { Article } from '../data/articles';
 interface ArticleCardProps {
   article: Article;
   featured?: boolean;
+  onOpenArticle?: (article: Article) => void;
 }
 
-export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) => {
+export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured, onOpenArticle }) => {
   if (featured) {
     return (
       <article className="featured-article-card">
@@ -22,9 +23,12 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) =
 
           <div className="article-footer">
             <span className="article-date">{article.date}</span>
-            <a href={`#article-${article.id}`} className="read-link">
+            <button
+              onClick={() => onOpenArticle?.(article)}
+              className="read-link-btn"
+            >
               Read Article <ArrowRight size={16} />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -84,7 +88,11 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) =
             font-weight: 500;
           }
 
-          .read-link {
+          .read-link-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -94,7 +102,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) =
             transition: gap var(--transition-fast);
           }
 
-          .read-link:hover {
+          .read-link-btn:hover {
             gap: 10px;
           }
 
@@ -129,9 +137,12 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured }) =
 
         <div className="article-footer">
           <span className="article-date">{article.date}</span>
-          <a href={`#article-${article.id}`} className="read-link">
+          <button
+            onClick={() => onOpenArticle?.(article)}
+            className="read-link-btn"
+          >
             Read <ArrowRight size={16} />
-          </a>
+          </button>
         </div>
       </div>
 

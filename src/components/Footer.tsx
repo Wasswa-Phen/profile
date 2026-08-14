@@ -18,9 +18,9 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="footer-links">
-          <a href="#privacy" className="footer-link">Privacy Policy</a>
-          <a href="#terms" className="footer-link">Terms of Service</a>
-          <a href="#sitemap" className="footer-link">Sitemap</a>
+          <Link to="/privacy" className="footer-link">Privacy Policy</Link>
+          <Link to="/terms" className="footer-link">Terms of Service</Link>
+          <Link to="/sitemap" className="footer-link">Sitemap</Link>
           {socialLinksData
             .filter((link) => link.status !== 'coming-soon')
             .slice(0, 5)

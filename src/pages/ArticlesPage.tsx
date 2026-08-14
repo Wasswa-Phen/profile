@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { articlesData } from '../data/articles';
+import type { Article } from '../data/articles';
 import { ArticleCard } from '../components/ArticleCard';
+import { ArticleModal } from '../components/ArticleModal';
 
 export const ArticlesPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
+  const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
   const categories = ['All', 'Front-End', 'Media Engineering', 'Kingdom Leadership'];
 
@@ -26,7 +29,11 @@ export const ArticlesPage: React.FC = () => {
 
         {/* FEATURED ARTICLE HERO */}
         {featuredArticle && (
-          <ArticleCard article={featuredArticle} featured={true} />
+          <ArticleCard
+            article={featuredArticle}
+            featured={true}
+            onOpenArticle={(art) => setSelectedArticle(art)}
+          />
         )}
 
         {/* FILTER BAR */}
@@ -45,10 +52,19 @@ export const ArticlesPage: React.FC = () => {
         {/* ARTICLES GRID */}
         <div className="articles-grid">
           {filteredArticles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
+            <ArticleCard
+              key={article.id}
+              article={article}
+              onOpenArticle={(art) => setSelectedArticle(art)}
+            />
           ))}
         </div>
       </div>
+
+      <ArticleModal
+        article={selectedArticle}
+        onClose={() => setSelectedArticle(null)}
+      />
 
       <style>{`
         .articles-page {

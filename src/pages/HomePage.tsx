@@ -2,15 +2,20 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Code, Mic, Layers, ArrowRight } from 'lucide-react';
 import { projectsData } from '../data/projects';
+import { articlesData } from '../data/articles';
+import type { Article } from '../data/articles';
 import { ProjectCard } from '../components/ProjectCard';
 import { CaseStudyModal } from '../components/CaseStudyModal';
+import { ArticleModal } from '../components/ArticleModal';
 import type { Project } from '../data/projects';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const [selectedProject, setSelectedProject] = React.useState<Project | null>(null);
+  const [selectedArticle, setSelectedArticle] = React.useState<Article | null>(null);
 
   const featuredProjects = projectsData.filter((p) => p.featured).slice(0, 2);
+  const featuredArticle = articlesData.find((a) => a.featured) || articlesData[0];
 
   return (
     <div className="home-page animate-fade-in">
@@ -155,7 +160,7 @@ export const HomePage: React.FC = () => {
               <p className="card-text mb-4">
                 Exploring how software engineering and media production intersect with spiritual stewardship — why I believe great software begins with understanding people and ends with honoring God through excellence.
               </p>
-              <button onClick={() => navigate('/articles')} className="read-link">
+              <button onClick={() => setSelectedArticle(featuredArticle)} className="read-link">
                 Read Article <ArrowRight size={16} />
               </button>
             </div>
@@ -191,6 +196,11 @@ export const HomePage: React.FC = () => {
       <CaseStudyModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
+      />
+
+      <ArticleModal
+        article={selectedArticle}
+        onClose={() => setSelectedArticle(null)}
       />
 
       <style>{`
